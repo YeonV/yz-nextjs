@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://hithub.com/YeonV/yz-nextws.git"
+    "url": "https://github.com/YeonV/yz-nextjs.git"
   },
   "scripts": {
     "dev": "next dev --turbo",
@@ -17,7 +17,7 @@
     "start": "next start",
     "lint": "next lint",
     "update": "npx npm-check -u",
-    "deploy-gh": "git subtree push --prefix out origin gh-pages",
+    "deploy-gh": "cross-env GHPAGES=true next build && git subtree push --prefix out origin gh-pages",
     "docker:build-development": "docker compose -f docker/development/docker-compose.yml build",
     "docker:start-development": "docker compose -f docker/development/docker-compose.yml up -d",
     "docker:stop-development": "docker compose -f docker/development/docker-compose.yml down",
@@ -29,10 +29,20 @@
     "docker:stop-production": "docker compose -f docker/production/docker-compose.yml down"
   },
   "dependencies": {
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
+    "@mui/icons-material": "^6.1.4",
+    "@mui/material": "^6.1.4",
+    "@mui/material-nextjs": "^6.1.4",
     "@next/env": "^15.0.0",
+    "cross-env": "^7.0.3",
+    "immer": "^10.1.1",
     "next": "15.0.0",
     "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020"
+    "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "zustand": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
