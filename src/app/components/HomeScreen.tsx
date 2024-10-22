@@ -54,7 +54,7 @@ const HomeScreen: React.FC = () => {
         <Accordion>
           <AccordionSummary>
             <CardHeader
-              title={<Typography variant='h5'>Environment</Typography>}
+              title={<Typography variant='h5'>Environment YZ2</Typography>}
               avatar={
                 <Avatar>
                   <Key />

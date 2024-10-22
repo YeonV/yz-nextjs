@@ -20,12 +20,15 @@
     "deploy-gh": "cross-env GHPAGES=true next build && git subtree push --prefix out origin gh-pages",
     "docker:build-development": "docker compose -f docker/development/docker-compose.yml build",
     "docker:start-development": "docker compose -f docker/development/docker-compose.yml up -d",
+    "docker:deploy-development": "npm run docker:build-development && npm run docker:start-development",
     "docker:stop-development": "docker compose -f docker/development/docker-compose.yml down",
     "docker:build-staging": "docker compose -f docker/staging/docker-compose.yml build",
     "docker:start-staging": "docker compose -f docker/staging/docker-compose.yml up -d",
+    "docker:deploy-staging": "npm run docker:build-staging && npm run docker:start-staging",
     "docker:stop-staging": "docker compose -f docker/staging/docker-compose.yml down",
     "docker:build-production": "docker compose -f docker/production/docker-compose.yml build",
     "docker:start-production": "docker compose -f docker/production/docker-compose.yml up -d",
+    "docker:deploy-production": "npm run docker:build-production && npm run docker:start-production",
     "docker:stop-production": "docker compose -f docker/production/docker-compose.yml down"
   },
   "dependencies": {
