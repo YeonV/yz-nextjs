@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import HomeScreen from './components/Home'
+import HomeScreen from './components/HomeScreen'
 
 export default function Home() {
   return (
