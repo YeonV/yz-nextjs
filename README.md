@@ -25,7 +25,7 @@ New App Starter
 ```sh
 git clone https://github.com/YeonV/yz-nextjs
 cd yz-nextjs
-npm i
+npm i --force
 ```
 
 ### Use
