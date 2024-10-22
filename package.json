@@ -17,6 +17,7 @@
     "start": "next start",
     "lint": "next lint",
     "update": "npx npm-check -u",
+    "deploy-gh": "git subtree push --prefix out origin gh-pages",
     "docker:build-development": "docker compose -f docker/development/docker-compose.yml build",
     "docker:start-development": "docker compose -f docker/development/docker-compose.yml up -d",
     "docker:stop-development": "docker compose -f docker/development/docker-compose.yml down",
