@@ -1,24 +1,44 @@
 {
-  "name": "yz-booking",
-  "version": "0.1.0",
+  "name": "yz-nextjs",
+  "version": "0.0.1",
+  "description": "Next.js project with TypeScript - Dockerized + multi-stage",
   "private": true,
+  "author": {
+    "name": "YeonV aka Blade"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://hithub.com/YeonV/yz-nextws.git"
+  },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update": "npx npm-check -u",
+    "docker:build-development": "docker compose -f docker/development/docker-compose.yml build",
+    "docker:start-development": "docker compose -f docker/development/docker-compose.yml up -d",
+    "docker:stop-development": "docker compose -f docker/development/docker-compose.yml down",
+    "docker:build-staging": "docker compose -f docker/staging/docker-compose.yml build",
+    "docker:start-staging": "docker compose -f docker/staging/docker-compose.yml up -d",
+    "docker:stop-staging": "docker compose -f docker/staging/docker-compose.yml down",
+    "docker:build-production": "docker compose -f docker/production/docker-compose.yml build",
+    "docker:start-production": "docker compose -f docker/production/docker-compose.yml up -d",
+    "docker:stop-production": "docker compose -f docker/production/docker-compose.yml down"
   },
   "dependencies": {
+    "@next/env": "^15.0.0",
+    "next": "15.0.0",
     "react": "19.0.0-rc-65a56d0e-20241020",
-    "react-dom": "19.0.0-rc-65a56d0e-20241020",
-    "next": "15.0.0"
+    "react-dom": "19.0.0-rc-65a56d0e-20241020"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "15.0.0"
+    "eslint-config-next": "15.0.0",
+    "typescript": "^5"
   }
 }
